@@ -1,15 +1,17 @@
 {
-  "host": "localhost",
+  "host": "HOST",
   "port": 3030,
+  "devPort": 8080,
   "public": "../public/",
+  "protocol": "PROTOCOL",
   "paginate": {
-    "default": 10,
-    "max": 50
+    "default": 50000000,
+    "max": 50000000
   },
   "authentication": {
     "entity": "user",
     "service": "users",
-    "secret": "SQe/ZObxOJdG1yAJ1KdzJxfFW+o=",
+    "secret": "SECRET",
     "authStrategies": [
       "jwt",
       "local"
@@ -18,8 +20,8 @@
       "header": {
         "typ": "access"
       },
-      "audience": "https://yourdomain.com",
-      "issuer": "feathers",
+      "audience": "AUDIENCE",
+      "issuer": "qva2world",
       "algorithm": "HS256",
       "expiresIn": "1d"
     },
@@ -52,5 +54,5 @@
       }
     }
   },
-  "mongodb": "mongodb://localhost:27017/feathers_flutter_lib_api"
+  "mongodb": "DB_MONGO"
 }
