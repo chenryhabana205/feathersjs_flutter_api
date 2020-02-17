@@ -1,4 +1,7 @@
 const path = require('path');
+
+require('dotenv').config();
+
 const favicon = require('serve-favicon');
 const compress = require('compression');
 const helmet = require('helmet');

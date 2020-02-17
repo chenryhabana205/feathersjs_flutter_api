@@ -7,7 +7,8 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const schema = new Schema({
-    text: { type: String, required: true }
+    text: { type: String, required: true },
+    completed: { type: Boolean, default: false }
   }, {
     timestamps: true
   });
@@ -18,5 +19,5 @@ module.exports = function (app) {
     mongooseClient.deleteModel(modelName);
   }
   return mongooseClient.model(modelName, schema);
-  
+
 };
