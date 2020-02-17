@@ -12,7 +12,7 @@ module.exports = function (app) {
     ownerId: {
       type: Schema.Types.ObjectId,
       ref: 'users'
-    },
+    }
   }, {
     timestamps: true
   });
